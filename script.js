@@ -3,6 +3,13 @@ function clearGrid(container) {
     container.firstChild.remove();
   }
 }
+function createMouseOverEffect(divs) {
+  divs.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+      div.style.backgroundColor = "black";
+    });
+  });
+}
 
 function createGrid(x) {
   const container = document.querySelector(".container");
@@ -18,11 +25,8 @@ function createGrid(x) {
   }
 
   const divs = document.querySelectorAll("div");
-  divs.forEach((div) => {
-    div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "black";
-    });
-  });
+
+  createMouseOverEffect(divs);
 }
 
 createGrid(16);
@@ -33,5 +37,10 @@ button.addEventListener("click", () => {
   let x = prompt(
     "Enter a number between 1-100 to change the amount of squares in a grid"
   );
+  while (x > 100 || x < 1) {
+    x = prompt(
+      "Enter a number between 1-100 to change the amount of squares in a grid"
+    );
+  }
   createGrid(x);
 });
