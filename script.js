@@ -58,6 +58,8 @@ function createGrid(x) {
     divs.forEach((div) => {
       div.style.backgroundColor = "white";
     });
+
+    createMouseOverEffect(divs);
   });
 }
 
