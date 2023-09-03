@@ -1,0 +1,23 @@
+/*Color palette: https://colorhunt.co/*/
+
+body {
+  color: white;
+  background-color: #93b1a6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttones {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: #5c8374;
+  color: white;
+  border: 1px solid #5c8374;
+  border-radius: 4px;
+  padding: 5px 10px;
+}

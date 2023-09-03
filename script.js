@@ -22,7 +22,7 @@ function getRandomColor() {
 function createGrid(x) {
   const container = document.querySelector(".container");
   container.style.cssText =
-    "width:1000px; height:1000px; border:10px solid black; display:flex;flex-wrap:wrap;";
+    "width:1000px; height:1000px; border:10px solid #5c8374; display:flex;flex-wrap:wrap;";
   clearGrid(container);
   for (let i = 1; i <= x * x; i++) {
     const div = document.createElement("div");
